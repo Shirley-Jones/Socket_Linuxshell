@@ -12,4 +12,7 @@
 * 执行 ./Socket.bin
 
 
-
+## 文件说明
+* Socket.c -------主程序
+* Socket_Controller.sh -------控制Socket启动 停止 重启
+* socket.service -------控制Socket_Controller.sh启动 停止 重启，可以直接设置此文件为开机自启 (mv ./socket.service /lib/systemd/system/socket.service && systemctl daemon-reload && systemctl enable socket.service)
