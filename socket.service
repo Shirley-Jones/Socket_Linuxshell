@@ -1,0 +1,13 @@
+[Unit]
+Description=socket
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/bin/bash /Zero/Core/Socket_Controller.sh start
+ExecReload=/bin/bash /Zero/Core/Socket_Controller.sh restart
+ExecStop=/bin/bash /Zero/Core/Socket_Controller.sh stop
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
